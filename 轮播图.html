@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>轮播图</title>
+        <style media="screen">
+            img{
+                height: 300px;
+                width: 500px;
+            }
+            .slide-image{
+                display: none
+            }
+            .active-image{
+                display: inline-block;
+            }
+            .slide{
+                position: relative;
+                display: inline-block;
+            }
+            .top-button{
+                height: 50px;
+                width: 20px;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 0.5;
+            }
+            .next-button{
+                height: 50px;
+                width: 20px;
+                opacity: 0.5;
+                position: absolute;
+                right: 0;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            .shepi {
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .guai {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background: white;
+                border-radius: 50%;
+            }
+            .white{
+                background: red
+            }
+        </style>
+    </head>
+    <body>
+        <div class="slide" data-imgs=3 data-active=0>
+            <img id=id-image-0 class='slide-image active-image' src="1.jpg">
+            <img id=id-image-1 class='slide-image' src="2.jpg">
+            <img id=id-image-2 class='slide-image' src="3.jpg">
+            <button class="top-button"><</button>
+            <button class="next-button">></button>
+            <div class="shepi">
+                <div id=id-div-0 class="guai white"></div>
+                <div id=id-div-1 class="guai"></div>
+                <div id=id-div-2 class="guai"></div>
+            </div>
+        </div>
+        <script src='轮播图.js'></script>
+    </body>
+</html>
